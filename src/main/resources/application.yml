@@ -1,18 +1,17 @@
+#工程的配置文件
 server:
   port: 8080
   servlet:
     context-path: /manager
 #配置 mybatis-config.xml 路径，mybatis-config.xml 中配置 MyBatis 基础属性
 mybatis:
-  mapper-locations: mapper/userMapper.xml
+  mapper-locations: mapper/*.xml
   type-aliases-package: com.kk.Springbootmanger.domain
-#配置sql的打印
+#配置sql的打印 //包路径为mapper文件包路径
   logging:
       level:
-        com.kk.Springbootmanger.dao: DEBUG //包路径为mapper文件包路径
-
-
-
+        com.kk.Springbootmanger.dao: DEBUG
+#数据库的配置信息
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
