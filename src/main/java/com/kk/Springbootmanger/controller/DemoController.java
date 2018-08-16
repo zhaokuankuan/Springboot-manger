@@ -25,6 +25,7 @@ public class DemoController {
     private UserDao userDao;
 
     @ApiOperation(value = "测试restful",notes = "测试工程")
+    @ApiImplicitParam(value = "姓名",name="name")
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String sayHello(String name){
         return name;
